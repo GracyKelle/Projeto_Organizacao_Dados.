@@ -7,3 +7,7 @@ WHERE quantidade = 0;
 
 ALTER TABLE Produtos
 ADD CONSTRAINT preco_positivo CHECK (preco >= 0);
+
+https://console.neon.tech/app/projects/polished-sea-10183071/branches/br-gentle-morning-asnh3iqx/sql-editor?database=neondb&query=teste+Update+utilizador
+https://console.neon.tech/app/projects/polished-sea-10183071/branches/br-gentle-morning-asnh3iqx/sql-editor?database=neondb&query=TESTE+DELETE
+https://console.neon.tech/app/projects/polished-sea-10183071/branches/br-gentle-morning-asnh3iqx/sql-editor?database=neondb&query=TESTE+CHECK
