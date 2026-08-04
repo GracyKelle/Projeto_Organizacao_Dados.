@@ -28,3 +28,5 @@ produto_id INT REFERENCES Produtos(id),
 quantidade INT NOT NULL,
 data_venda TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+ALTER TABLE Utilizadores
+ADD CONSTRAINT email_valido CHECK (email LIKE '%@%.%');
