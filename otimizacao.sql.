@@ -1,0 +1,27 @@
+A Solução: Ser Cirúrgico
+Se só precisa do nome do cliente, peça apenas o nome.
+• Ação:
+o Errado: SELECT * FROM Utilizadores; (Trás-me a pasta toda).
+o Certo: SELECT nome FROM Utilizadores; (Trás-me só o cartão de
+identificação).
+
+O Comando EXPLAIN ANALYZE (A "Prova de Velocidade")
+Querem saber exatamente quanto tempo o computador demorou? Usem o
+EXPLAIN ANALYZE.
+• Ação: EXPLAIN ANALYZE SELECT nome FROM Utilizadores WHERE nome =
+'João';
+• Como ler: O computador vai devolver uma linha que diz ‘Execution Time:
+0.042 ms’.
+• O desafio: Comparem o tempo de um ‘SELECT *’ com um ‘SELECT nome’.
+Vão ver que o segundo é quase sempre mais rápido.
+
+Evitar o "Loop da Morte" (Joins mal feitos)
+Quando ligamos duas tabelas (Vendas e Utilizadores), se não tivermos cuidado, o
+computador pode fazer o que chamamos de Cartesian Product (multiplicar todas
+as linhas por todas as linhas). É como se o empregado tentasse comparar cada
+venda com cada utilizador individualmente, mesmo que não tenham ligação.
+• A regra de ouro: Usem sempre o ‘ON’ para criar a ponte.
+-- A PONTE SEGURA
+SELECT Vendas.id, Utilizadores.nome
+FROM Vendas
+JOIN Utilizadores ON Vendas.utilizador_id = Utilizadores.id;
