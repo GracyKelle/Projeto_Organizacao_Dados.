@@ -9,3 +9,6 @@ clientes, vendas e stocks."
 `schema.sql e data.sql` nesta pasta."
 • "O que fazer se tudo arder?": "Corram o ficheiro
 `recuperar_tudo.sh` que está na pasta `scripts`."
+
+reflete a consolidação da infraestrutura e
+a conclusão do percurso prático do módulo
